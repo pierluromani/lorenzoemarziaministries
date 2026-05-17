@@ -64,7 +64,7 @@ function StickyImageDisplay() {
                     key={i}
                     className="absolute inset-0 w-full h-full"
                     animate={{ opacity: activeIndex === i ? 1 : 0, scale: activeIndex === i ? 1 : 1.05 }}
-                    transition={{ duration: 0.8, ease: "easeInOut" }}
+                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
                 >
                     <div className="absolute inset-0 bg-black/20 z-10" />
                     <Image src={block.image} alt={block.title} fill className="object-cover" />

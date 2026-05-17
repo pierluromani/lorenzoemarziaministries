@@ -41,7 +41,7 @@ export default function Ministries() {
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.2 }}
+              transition={{ delay: i * 0.2, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
               className="group bg-[#111218] border border-gray-800 hover:border-accent-blue rounded-2xl p-8 transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_10px_30px_rgba(29,78,216,0.15)]"
             >
               <div className="text-4xl mb-6">{min.icon}</div>

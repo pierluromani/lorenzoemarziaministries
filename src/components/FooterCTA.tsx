@@ -30,7 +30,7 @@ export default function FooterCTA() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
           className="text-gray-400 font-sans text-lg max-w-xl mb-16"
         >
           Unisciti alla nostra community online per non perderti i prossimi messaggi, eventi e aggiornamenti del ministero.
@@ -49,7 +49,7 @@ export default function FooterCTA() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: 0.1 + (i * 0.1) }}
+                transition={{ delay: 0.1 + (i * 0.1), duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 className="group flex flex-col md:flex-row items-center justify-center gap-3 px-6 py-5 md:py-4 rounded-[1.5rem] md:rounded-full bg-white/5 border border-white/10 hover:border-accent-blue hover:bg-white/10 transition-all duration-300 w-full md:w-auto"
@@ -68,7 +68,7 @@ export default function FooterCTA() {
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.3, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
           className="w-full max-w-md p-8 md:p-10 rounded-[2rem] bg-gradient-to-br from-[#111218] to-[#0a0b0f] border border-gray-800 shadow-2xl flex flex-col items-center mb-24"
         >
           <div className="w-14 h-14 rounded-full bg-accent-blue/10 flex items-center justify-center mb-6">

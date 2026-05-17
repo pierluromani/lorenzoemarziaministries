@@ -31,7 +31,7 @@ export default function MasonryGallery() {
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              transition={{ delay: i * 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
               className={`relative rounded-xl overflow-hidden group ${img.span}`}
             >
               <Image 

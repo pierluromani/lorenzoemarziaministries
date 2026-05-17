@@ -18,8 +18,8 @@ export default function Hero() {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 1.2,
-                ease: "easeOut" as const // <-- IL SEGRETO È QUESTO "as const"
+                duration: 0.8,
+                ease: [0.16, 1, 0.3, 1] as const
             }
         }
     };
@@ -77,7 +77,7 @@ export default function Hero() {
                 <motion.div
                     initial={{ scale: 0.9, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] as const }}
                     className="relative w-full aspect-[4/5] md:aspect-auto md:h-[80vh] rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-950/40"
                 >
                     <Image
