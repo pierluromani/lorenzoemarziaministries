@@ -27,19 +27,25 @@ export default function Hero() {
           animate="visible"
           className="max-w-2xl"
         >
-          <motion.h1 
-            variants={itemVariants}
-            className="mb-8 flex flex-col"
-          >
-            <div className="font-serif font-bold text-6xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] leading-[1.1] flex flex-col md:flex-row md:items-center md:gap-5">
-              <span className="bg-gradient-to-r from-[#1c426e] to-[#3ca2ef] bg-clip-text text-transparent">Lorenzo</span>
-              <span className="text-gray-200">&</span>
-              <span className="bg-gradient-to-r from-[#dfa6b9] to-[#eb94d9] bg-clip-text text-transparent">Marzia</span>
-            </div>
-            <div className="mt-2 md:mt-4 text-2xl md:text-3xl tracking-[0.2em] font-sans font-light text-gray-300">
+          <h1 className="mb-8 flex flex-col text-left">
+            <span className="font-serif font-bold text-6xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] leading-[1.1] flex flex-col">
+              {/* Prima riga */}
+              <motion.span variants={itemVariants} className="block">
+                <span className="bg-gradient-to-r from-[#1c426e] to-[#3ca2ef] bg-clip-text text-transparent block">Lorenzo</span>
+              </motion.span>
+              
+              {/* Seconda riga */}
+              <motion.span variants={itemVariants} className="flex items-center gap-4 md:gap-6">
+                <span className="text-gray-200 block">&</span>
+                <span className="bg-gradient-to-r from-[#dfa6b9] to-[#eb94d9] bg-clip-text text-transparent block">Marzia</span>
+              </motion.span>
+            </span>
+            
+            {/* Terza riga */}
+            <motion.span variants={itemVariants} className="block mt-2 md:mt-4 text-2xl md:text-3xl tracking-[0.2em] font-sans font-light text-gray-300 uppercase">
               MINISTRIES
-            </div>
-          </motion.h1>
+            </motion.span>
+          </h1>
           
           <motion.p 
             variants={itemVariants}
@@ -60,12 +66,12 @@ export default function Hero() {
       </div>
 
       {/* Right Side: Image */}
-      <div className="w-full md:w-1/2 relative min-h-[50vh] md:min-h-screen overflow-hidden">
+      <div className="w-full md:w-1/2 flex items-center justify-center p-8 md:p-16 lg:p-24 min-h-[60vh] md:min-h-screen">
         <motion.div
-          initial={{ scale: 1.1, opacity: 0 }}
+          initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0 w-full h-full"
+          className="relative w-full aspect-[4/5] md:aspect-auto md:h-[80vh] rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-950/40"
         >
           <Image 
             src="/images/hero-bg.jpg"

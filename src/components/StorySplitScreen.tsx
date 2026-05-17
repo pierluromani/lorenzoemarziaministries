@@ -12,7 +12,12 @@ const storyBlocks = [
     },
     {
         title: "",
-        content: "Ma… dopo un po’, Lorenzo realizza che la sua vita non era come si aspettava e si ritrova a smarrire completamente se stesso e la via intrapresa con tanto zelo anni prima. Ma Dio non aveva finito con lui… e cresce dentro di sé un grido di disperazione, un bisogno di cominciare a vivere secondo i principii biblici per riscattare la sua vita e quella dei sinceri che erano rimasti aggrappati solo a Dio e al suo fianco, e che così come lui non avevano compromesso il loro cuore al male! Desidera quindi tornare radicalmente a Dio, come mai prima, ma aveva perso apparentemente tutto ed era diventato preda e bersaglio di tanti! Ed è proprio in risposta a questo grido di disperazione che la grazia del Signore lo ha raggiunto proprio attraverso degli uomini di Dio che hanno ascoltato la voce del Signore, dei fratelli sinceri e sua moglie Marzia, che lo ha accolto con sé e sostenuto proprio nel momento più buio della sua vita, quando non aveva più nulla da offrire, addossandosi insieme a lui ogni peso ed ogni attacco, resistendo al suo fianco e in tutto il suo processo continuo di redenzione interiore per assomigliare davvero al cuore di Gesù sino ad oggi.",
+        content: "Ma… dopo un po’, Lorenzo realizza che la sua vita non era come si aspettava e si ritrova a smarrire completamente se stesso e la via intrapresa con tanto zelo anni prima. Ma Dio non aveva finito con lui… e cresce dentro di sé un grido di disperazione, un bisogno di cominciare a vivere secondo i principii biblici per riscattare la sua vita e quella dei sinceri che erano rimasti aggrappati solo a Dio e al suo fianco, e che così come lui non avevano compromesso il loro cuore al male! Desidera quindi tornare radicalmente a Dio, come mai prima, ma aveva perso apparentemente tutto ed era diventato preda e bersaglio di tanti!",
+        image: "/images/storia-2.jpg"
+    },
+    {
+        title: "",
+        content: "Ed è proprio in risposta a questo grido di disperazione che la grazia del Signore lo ha raggiunto proprio attraverso degli uomini di Dio che hanno ascoltato la voce del Signore, dei fratelli sinceri e sua moglie Marzia, che lo ha accolto con sé e sostenuto proprio nel momento più buio della sua vita, quando non aveva più nulla da offrire, addossandosi insieme a lui ogni peso ed ogni attacco, resistendo al suo fianco e in tutto il suo processo continuo di redenzione interiore per assomigliare davvero al cuore di Gesù sino ad oggi.",
         image: "/images/storia-2.jpg"
     },
     {
