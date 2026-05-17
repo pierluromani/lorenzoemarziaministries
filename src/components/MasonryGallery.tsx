@@ -3,11 +3,16 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+import galleria1 from '../../public/images/galleria-1.jpg';
+import galleria2 from '../../public/images/galleria-2.jpg';
+import galleria3 from '../../public/images/galleria-3.jpg';
+import galleria4 from '../../public/images/galleria-4.jpg';
+
 const images = [
-  { src: "/images/galleria-1.jpg", caption: "Culto Domenicale", span: "md:col-span-2 md:row-span-2" },
-  { src: "/images/galleria-2.jpg", caption: "Lode e Adorazione", span: "md:col-span-1 md:row-span-1" },
-  { src: "/images/galleria-3.jpg", caption: "Incontri di Preghiera", span: "md:col-span-1 md:row-span-1" },
-  { src: "/images/galleria-4.jpg", caption: "Momenti di Fellowship", span: "md:col-span-3 md:row-span-2" }
+  { src: galleria1, caption: "Culto Domenicale", span: "md:col-span-2 md:row-span-2" },
+  { src: galleria2, caption: "Lode e Adorazione", span: "md:col-span-1 md:row-span-1" },
+  { src: galleria3, caption: "Incontri di Preghiera", span: "md:col-span-1 md:row-span-1" },
+  { src: galleria4, caption: "Momenti di Fellowship", span: "md:col-span-3 md:row-span-2" }
 ];
 
 export default function MasonryGallery() {
@@ -38,6 +43,7 @@ export default function MasonryGallery() {
                 src={img.src} 
                 alt={img.caption} 
                 fill
+                placeholder="blur"
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

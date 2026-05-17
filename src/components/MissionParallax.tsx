@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import chiamataImg from '../../public/images/chiamata.jpg';
 
 export default function MissionParallax() {
   return (
@@ -17,9 +18,10 @@ export default function MissionParallax() {
           className="relative w-full aspect-[4/5] md:aspect-auto md:h-[80vh] rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-950/40"
         >
           <Image 
-            src="/images/chiamata.jpg"
+            src={chiamataImg}
             alt="La Chiamata"
             fill
+            placeholder="blur"
             className="object-cover object-center"
           />
         </motion.div>

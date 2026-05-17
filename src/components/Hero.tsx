@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import heroBg from '../../public/images/hero-bg.jpg';
 
 export default function Hero() {
     const containerVariants = {
@@ -81,10 +82,11 @@ export default function Hero() {
                     className="relative w-full aspect-[4/5] md:aspect-auto md:h-[80vh] rounded-[2rem] overflow-hidden shadow-2xl shadow-blue-950/40"
                 >
                     <Image
-                        src="/images/hero-bg.jpg"
+                        src={heroBg}
                         alt="Lorenzo & Marzia Ministries"
                         fill
                         priority
+                        placeholder="blur"
                         className="object-cover object-center"
                     />
                 </motion.div>

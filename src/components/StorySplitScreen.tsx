@@ -4,36 +4,41 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState, useEffect } from "react";
 
+import storia1 from '../../public/images/storia-1.jpg';
+import storia2 from '../../public/images/storia-2.jpg';
+import storia3 from '../../public/images/storia-3.jpg';
+import insieme from '../../public/images/insieme.jpg';
+
 const storyBlocks = [
     {
         title: "La Chiamata di Lorenzo",
         content: "Lorenzo Montanaro ha iniziato il suo percorso di fede cristiana nel 2007, mentre prestava servizio come volontario nell’esercito italiano. In un incontro sovrannaturale “cambia vita”, per le strade di Bologna, attraverso la testimonianza di alcuni adolescenti, il Signore si è rivelato potentemente al suo cuore. Poco dopo infatti parte per la Norvegia per un’esperienza di scuola biblica nei “Jesus Revolution” durata circa un anno. Al termine, rientra  in Italia e comincia una chiamata evangelistica come Pastore dei giovani presso una chiesa di Bari. L’esperienza che lo terrà impegnato con dedizione e amore per il Vangelo per circa 5 anni dove sarà testimone di centinaia di vite trasformate, e dopo Lorenzo si ritroverà a fondare quattro comunità sul territorio italiano. ",
-        image: "/images/storia-1.jpg"
+        image: storia1
     },
     {
         title: "",
         content: "Ma… dopo un po’, Lorenzo realizza che la sua vita non era come si aspettava e si ritrova a smarrire completamente se stesso e la via intrapresa con tanto zelo anni prima. Ma Dio non aveva finito con lui… e cresce dentro di sé un grido di disperazione, un bisogno di cominciare a vivere secondo i principii biblici per riscattare la sua vita e quella dei sinceri che erano rimasti aggrappati solo a Dio e al suo fianco, e che così come lui non avevano compromesso il loro cuore al male! Desidera quindi tornare radicalmente a Dio, come mai prima, ma aveva perso apparentemente tutto ed era diventato preda e bersaglio di tanti!",
-        image: "/images/storia-2.jpg"
+        image: storia2
     },
     {
         title: "",
         content: "Ed è proprio in risposta a questo grido di disperazione che la grazia del Signore lo ha raggiunto proprio attraverso degli uomini di Dio che hanno ascoltato la voce del Signore, dei fratelli sinceri e sua moglie Marzia, che lo ha accolto con sé e sostenuto proprio nel momento più buio della sua vita, quando non aveva più nulla da offrire, addossandosi insieme a lui ogni peso ed ogni attacco, resistendo al suo fianco e in tutto il suo processo continuo di redenzione interiore per assomigliare davvero al cuore di Gesù sino ad oggi.",
-        image: "/images/storia-2.jpg"
+        image: storia2
     },
     {
         title: "Il Cuore di Marzia",
         content: "Sua moglie Marzia Vergari, convertita nel 2012 attraverso un’esperienza travolgente con il Signore Gesù ed in seguito alla guarigione sovrannaturale di suo figlio, decide di vivere al servizio di Dio e degli altri. Da lei la sua famiglia e decine e decine di famiglie si convertono e avvicinano alla fede come mai prima...",
-        image: "/images/storia-3.jpg"
+        image: storia3
     },
     {
         title: "",
         content: "...mentre lei serve Dio con umiltà nella comunità locale con integrità e dedizione, aiutando sempre “gli ultimi” e portando frutto, inizialmente con i bambini nella Scuola Domenicale, con le donne, e oggi ancora con la lode, fondando il gruppo Gospel “Liberi per davvero Band” e incidendo il primo brano/testimonianza “Senza di te”, mantenendo come unico scopo ancora e sempre la salvezza delle anime!",
-        image: "/images/storia-3.jpg"
+        image: storia3
     },
     {
         title: "Insieme per una Nuova Generazione",
         content: "Uniti, non si sono lasciati abbattere. Nel Gennaio 2023 fondano il Centro Cristiano 'Liberi per Davvero Church' a Bari. Oggi, fianco a fianco, si dedicano al discepolato e alla formazione, usando la loro storia radicale per aiutare gli altri a splendere anche nelle tenebre più buie.",
-        image: "/images/insieme.jpg"
+        image: insieme
     }
 ];
 
@@ -67,7 +72,7 @@ function StickyImageDisplay() {
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] as const }}
                 >
                     <div className="absolute inset-0 bg-black/20 z-10" />
-                    <Image src={block.image} alt={block.title} fill className="object-cover" />
+                    <Image src={block.image} alt={block.title} fill className="object-cover" placeholder="blur" />
                 </motion.div>
             ))}
         </>
@@ -100,7 +105,7 @@ export default function StorySplitScreen() {
                             data-index={i}
                         >
                             <div className="relative w-full h-64 mb-6 md:hidden rounded-xl overflow-hidden">
-                                <Image src={block.image} alt={block.title} fill className="object-cover" />
+                                <Image src={block.image} alt={block.title} fill className="object-cover" placeholder="blur" />
                             </div>
                             <h2 className="font-serif text-3xl md:text-5xl font-bold text-white mb-6">{block.title}</h2>
                             <p className="text-lg text-gray-300 leading-relaxed font-sans">{block.content}</p>
