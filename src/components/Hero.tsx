@@ -19,7 +19,7 @@ export default function Hero() {
             y: 0,
             transition: {
                 duration: 1.2,
-                ease: "easeOut" // <-- Sostituisci l'array con questa stringa!
+                ease: "easeOut" as const // <-- IL SEGRETO È QUESTO "as const"
             }
         }
     };

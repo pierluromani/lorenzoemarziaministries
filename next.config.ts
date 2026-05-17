@@ -1,11 +1,13 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
     images: {
         unoptimized: true,
     },
-    basePath: '/lorenzoemarziaministries', // Es. '/lorenzo-marzia-ministries'
-    trailingSlash: true, // Genera cartelle fisiche per ogni rotta, risolvendo i 404
+    basePath: isProd ? '/lorenzoemarziaministries' : '',
+    trailingSlash: true,
 };
 
 export default nextConfig;
