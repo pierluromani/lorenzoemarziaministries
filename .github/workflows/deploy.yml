@@ -2,7 +2,7 @@ name: Deploy Next.js site to Pages
 
 on:
   push:
-    branches: ["main"] # Cambia in "master" se la tua cartella principale si chiama così
+    branches: ["main"] # Cambia in "master" se il tuo branch principale si chiama così
 
 permissions:
   contents: read
@@ -27,9 +27,7 @@ jobs:
           cache: ${{ hashFiles('package-lock.json') && 'npm' || hashFiles('yarn.lock') && 'yarn' || 'pnpm' }}
 
       - name: Setup Pages
-        uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
+        uses: actions/configure-pages@v5 # Aggiornato alla v5, senza automatismi che rompono il config TS
 
       - name: Install dependencies
         run: |
@@ -50,7 +48,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: ./out # Ora Next.js creerà questa cartella senza interferenze
 
   deploy:
     environment:
