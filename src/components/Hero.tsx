@@ -19,7 +19,7 @@ export default function Hero() {
             y: 0,
             transition: {
                 duration: 1.2,
-                ease: [0.16, 1, 0.3, 1] // <-- Niente virgolette qui!
+                ease: "easeOut" // <-- Sostituisci l'array con questa stringa!
             }
         }
     };
