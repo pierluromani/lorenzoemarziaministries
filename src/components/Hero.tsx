@@ -19,7 +19,7 @@ export default function Hero() {
             y: 0,
             transition: {
                 duration: 1.2,
-                ease: "easeOut" as const // <-- IL SEGRETO È QUESTO "as const"
+                ease: [0.16, 1, 0.3, 1] // <-- Niente virgolette qui!
             }
         }
     };
